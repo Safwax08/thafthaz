@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thafthaz | Graphic Designer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Syne:wght@700;800&display=swap"
+        rel="stylesheet">
+    <!-- Three.js for 3D Animation -->
+    <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.150.1/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@0.150.1/examples/jsm/"
+        }
+      }
+    </script>
+</head>
+
+<body class="dark-mode">
+
+    <!-- Interactive 3D Background -->
+    <div id="bg-3d-animation" class="bg-3d-layer"></div>
+    <div class="video-overlay"></div>
+
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="#" class="logo-text">THAFHAZ</a>
+            </div>
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="#about" class="nav-item">About</a></li>
+                    <li><a href="#work" class="nav-item">Work</a></li>
+                    <li><a href="#contact" class="nav-item">Contact</a></li>
+                    <li class="insta-dropdown-container">
+                        <a href="https://www.instagram.com/thafhaz_design" target="_blank" class="nav-item"
+                            id="insta-trigger">
+                            <i class="fa-brands fa-instagram"></i> Instagram <i class="fa-solid fa-chevron-down"
+                                style="font-size: 0.7rem;"></i>
+                        </a>
+                        <div class="insta-dropdown" id="insta-dropdown">
+                            <a href="https://www.instagram.com/thafhaz_design" target="_blank">
+                                <i class="fa-solid fa-palette"></i> thafhaz_design
+                            </a>
+                            <a href="https://www.instagram.com/thafhaz" target="_blank">
+                                <i class="fa-solid fa-user"></i> thafhaz (Personal)
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-grid">
+            <div class="hero-info">
+                <span class="hero-tagline">Hello, I'm</span>
+                <h1 class="hero-name-split">THAFHAZ</h1>
+                <h2 class="hero-role-simple">Specialized in Branding, Typography, UI/UX Design & Motion Graphics.
+                    Creating visual experiences that matter.</h2>
+                <div class="hero-cta">
+                    <a href="#contact" class="btn btn-blue">Contact Me</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="profile-img-wrapper">
+                    <img src="assets/images/profile.jpeg" alt="Thafthaz" class="profile-img"
+                        style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section-padding">
+        <div class="container">
+            <h2 class="section-title">About</h2>
+            <p class="about-text">
+                I’m a Video Editor and Graphic Designer who turns ideas into visually striking stories,
+                specializing in engaging edits, dynamic motion graphics, and bold designs that help brands
+                stand out. With a strong eye for detail and storytelling, I create polished content—from social
+                media videos to brand visuals—always aiming to make each project modern, impactful, and memorable.
+            </p>
+
+        </div>
+    </section>
+
+    <!-- Work Projects -->
+    <section id="work" class="section-padding">
+        <div class="container">
+            <h2 class="section-title">My Work</h2>
+            <p style="margin-bottom: 1rem; color: var(--color-text-muted);">Core services I offer — click to view
+                details or contact me for custom work.</p>
+            <div class="projects-grid">
+                <div class="project-card project-graphic" role="button" tabindex="0"
+                    aria-label="Open Graphic Design gallery">
+                    <div class="project-img">
+                        <div class="gallery-preview gd-gallery" data-manifest="assets/images/graphic-manifest.json"
+                            aria-hidden="false">
+                            <img src="assets/images/australia-visa.jpg" alt="Australia VISA" class="featured-project-img">
+                            <div class="gd-loading" style="color:var(--color-text-muted);">Loading images...</div>
+                        </div>
+                        <div class="project-instruction">Click to view Gallery</div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-category">Graphic Design</div>
+                        <h3 class="project-title">Australia VISA Poster</h3>
+                        <p style="color: var(--color-text-muted); margin-top: 0.5rem;">Corporate and travel branding for TravelPaack, designed for clarity and impact.</p>
+                    </div>
+                </div>
+                <div class="project-card project-video" role="button" tabindex="0" data-hover-video="assets/images/IMG_3365.MOV"
+                    aria-label="Open Video Editing gallery">
+                    <div class="project-img">
+                        <div class="video-preview vd-gallery" data-manifest="assets/videos-manifest.json"
+                            aria-hidden="false">
+                            <img src="assets/images/IMG-20250827-WA0050.jpg" alt="Video Editing Project" class="featured-project-img" id="video-thumb">
+                            <video id="hover-preview-video" muted loop playsinline class="video-hover-layer">
+                                <source src="assets/images/IMG_3365.MOV" type="video/mp4">
+                            </video>
+                            <div class="gd-loading" style="color:var(--color-text-muted);">Loading videos...</div>
+                        </div>
+                        <div class="project-instruction">Hover to Play | Click for all</div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-category">Video Editing</div>
+                        <h3 class="project-title">Edits & Motion</h3>
+                        <p style="color: var(--color-text-muted); margin-top: 0.5rem;">Social videos, promos, and motion
+                            graphics with fast turnaround and crisp storytelling.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img">
+                        <i class="fa-solid fa-camera fa-4x text-primary" style="opacity: 0.8;"></i>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-category">Photo Editing</div>
+                        <h3 class="project-title">Retouch & Color</h3>
+                        <p style="color: var(--color-text-muted); margin-top: 0.5rem;">Professional retouching, color
+                            correction and image optimization.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding">
+        <div class="container">
+            <h2 class="section-title">Contact Me</h2>
+            <div class="contact-container">
+                <div class="contact-left">
+
+                    <div class="contact-info-item">
+                        <div class="contact-icon">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div>
+                            <h4>Phone</h4>
+                            <p style="color: var(--color-text-muted);">+91 8277389481</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <div class="contact-icon">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4>Email</h4>
+                            <p style="color: var(--color-text-muted);">thafthaz313@gmail.com</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <div class="contact-icon">
+                            <i class="fa-solid fa-globe"></i>
+                        </div>
+                        <div>
+                            <h4>Website</h4>
+                            <p style="color: var(--color-text-muted);">www.website.com</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <a href="https://www.instagram.com/thafthaz_design/" target="_blank"
+                            style="display: flex; align-items: center; width: 100%;">
+                            <div class="contact-icon">
+                                <i class="fa-brands fa-instagram"></i>
+                            </div>
+                            <div>
+                                <h4>Instagram (Design)</h4>
+                                <p style="color: var(--color-text-muted);">@thafthaz_design</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <a href="https://www.instagram.com/iconn.studios/" target="_blank"
+                            style="display: flex; align-items: center; width: 100%;">
+                            <div class="contact-icon">
+                                <i class="fa-brands fa-instagram"></i>
+                            </div>
+                            <div>
+                                <h4>Instagram (Studios)</h4>
+                                <p style="color: var(--color-text-muted);">@iconn.studios</p>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="contact-right">
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Your Name">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Your Email">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" rows="5" placeholder="Your Message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Thafthaz. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <div class="cursor"></div>
+    <div class="cursor2"></div>
+
+    <script type="module" src="js/script.js"></script>
+</body>
+
+</html>
